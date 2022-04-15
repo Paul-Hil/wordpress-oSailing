@@ -1,0 +1,30 @@
+.cache
+dist
+node_modules
+package-lock.json
+
+
+vendor
+wp
+wp-config.php
+.htaccess
+
+# nous demandons à git d'ignorer tout ce qui se trouve dans le dossier wp-content
+# Attention à utiliser des chemins "complets"
+
+# on ignore tout ce qu'il y a dans le dossier content
+/public/content/*
+
+# mais on surveille tout de même ce qu'il y a dans content
+!/public/content
+
+# on ignore tout ce qu'il y a dans le dossier theme
+/public/content/themes/*
+
+# mais on surveille tout de même ce qu'il y a dans content/themes
+!/public/content/themes
+
+# on n'ignore pas le dossier  content/themes/osailing
+!/public/content/themes/osailing
+
+# Le ! me permet de définir une "exception"
